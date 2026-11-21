@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VOLORA LOGIN</title>
+    <link rel="stylesheet" href="a.css">
+    
+</head>
+<body>
+    <form id="myform">
+    <div class="div1">
+        <h1 class="h1">VOLORA</h1>
+        
+        <div class="c">
+            <label for="Username" class="cc">Username:</label>
+        <input id="Username" type="text" name="Username">
+        <span class="error" id="Username Error" style="color:red; font-size: 15px;"></span>
+        </div>
+        <div class="d">
+            <label for="Password" class="cc">Password:</label>
+        <input id="Password" type="password" name="Password">
+        <span class="Error" id="Password Error" style="color:red; font-size: 15px;"></span>
+        </div>
+        <div class="btn-group">
+            
+        <button class="btn1" type="button" id="submitBtn">submit
+        
+        <button class="btn2" type="reset" id="btn2">Reset
+        
+        </div>
+    </div>
+</form>
+<script>
+
+document.getElementById("submitBtn").addEventListener("click", function(){
+
+let Username =document.getElementById("Username").value.trim();
+let Password =document.getElementById("Password").value.trim();
+
+let UsernameError=document.getElementById("Username Error");
+let PasswordError=document.getElementById("Password Error");
+
+UsernameError.innerText="";
+PasswordError.innerText="";
+
+let hasError=false;
+
+if(Username===""){
+
+UsernameError.innerText="لطفا نام کاربری را وارد کنید "
+haserror=true;
+}
+if(Password===""){
+
+PasswordError.innerText="لطفا رمز عبور را وارد کنید"
+hasError=true;
+}
+
+if(hasError===false){
+
+
+window.location.href="b.html";
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<script>
+    function copyPhone() {
+    
+        const phone = document.getElementById("phoneNumber").textContent;
+    
+        navigator.clipboard.writeText(phone).then(function () {
+    
+            alert("شماره تماس کپی شد!");
+    
+        });
+    
+    }
+</body>
+</html>
